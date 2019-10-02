@@ -1,0 +1,91 @@
+\documentclass{minimal}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[default, black, regular, scale=1.2]{sourcecodepro}
+\linespread{1.2}
+
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage[a4paper, margin=3pc]{geometry}
+
+\usepackage{hyperref}
+
+\setlength{\parindent}{0pt}
+
+\definecolor{background}{RGB}{34, 37, 50}
+\definecolor{foreground}{RGB}{248, 248, 242}
+\definecolor{repl}{RGB}{173, 147, 197}
+\definecolor{comment}{RGB}{126, 144, 196}
+\definecolor{keyword}{RGB}{255, 185, 108}
+
+\pagecolor{background}
+\color{foreground}
+
+
+\newcommand{\keyword}[1]{\textcolor{keyword}{#1}}
+\newcommand{\comment}[1]{\textcolor{comment}{\# #1}}
+\newcommand{\repl}[1]{\textbf{\textcolor{repl}{>{}>{}>} #1 \\}}
+\newcommand{\replcont}[1]{\textbf{\textcolor{repl}{\ldots}\ #1 \\}}
+
+\begin{document}
+    \repl{\keyword{from} nicolas \keyword{import} cv}
+
+    \repl{\keyword{print}(cv.name)}
+
+    =================================================================== \\
+    =================================================================== \\
+    ======================~~~~~~~~~~~~~~~~~~~~~~~====================== \\
+    ======================~~\keyword{Nicolas Harlem Eide}~~====================== \\
+    ======================~~~~~~~~~~~~~~~~~~~~~~~====================== \\
+    =================================================================== \\
+    =================================================================== \\
+
+    \repl{\keyword{print}(cv.contact)}
+
+    Phone:~~~~~\href{tel:+4792477442}{+47 924 77 442} \\
+    E-mail:~~~~\href{mailto:nicolas@harlemeide.net}{nicolas@harlemeide.net} \\
+
+    \repl{\keyword{print}(cv.about)}
+
+    Software developer with a passion for automation and simplicity. \\
+    Trying to help people achieve what they want with less effort. \\
+
+    \repl{\keyword{print}(cv.experience)}
+
+    \begin{verbatim}
+| Employer              | Position          | Period              |
+|-----------------------|-------------------|---------------------|
+| mnemonic              | Developer         | 2018 - present      |
+| mnemonic              | Security Analyst  | 2017 - 2018         |
+| University of Oslo    | Student Recruiter | 2016 - 2017         |
+    \end{verbatim}
+
+    \repl{\keyword{print}(cv.volunteering)}
+
+    \begin{verbatim}
+| Organization          | Position          | Period              |
+|-----------------------|-------------------|---------------------|
+| Øya IT                | Godtfolk          | 2017 - present      |
+| Cybernetisk Selskab   | Nestleder         | 2018 - 2019         |
+| Fadderstyret ved IFI  | Nestleder         | 2017 - 2018         |
+| dagen@IFI             | Teknisk Ansvarlig | 2016 - 2019         |
+| Cybernetisk Selskab   | Teknisk Ansvarlig | 2015 - 2017         |
+    \end{verbatim}
+
+    \repl{\keyword{print}(cv.education)}
+
+    \begin{verbatim}
+| University   | Type   | Name                     | Period       |
+|--------------|--------|--------------------------|--------------|
+| UiO          | M.Sc.  | Programming and Networks | 2018 - 2020  |
+| UiO          | B.Sc.  | Programming and Networks | 2015 - 2018  |
+    \end{verbatim}
+
+    \repl{\comment{My CV is continuously integrated and deployed}}
+    \replcont{\comment{You can find it on my GitHub!}}
+    \replcont{\keyword{print}(cv.source)}
+
+    \url{http://github.com/nicolaei/cv}
+\end{document}

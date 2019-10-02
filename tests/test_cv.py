@@ -27,7 +27,7 @@ def test_that_i_can_be_contacted_by_a_potential_employer():
 
 
 @mock.patch("shutil.get_terminal_size")
-def test_that_header_prints_full_terminal_width(terminal_size_mock):
+def test_that_header_returns_full_terminal_width(terminal_size_mock):
     expected_columns = 80
     test_text = "Test"
 
@@ -39,7 +39,7 @@ def test_that_header_prints_full_terminal_width(terminal_size_mock):
 
 
 @mock.patch("shutil.get_terminal_size")
-def test_that_header_prints_full_terminal_width_with_odd_input(
+def test_that_header_returns_full_terminal_width_with_odd_input(
         terminal_size_mock):
     expected_columns = 80
     test_text = "Testing"

@@ -1,5 +1,9 @@
 """Nicolas Harlem Eide's CV in glorious python"""
 import shutil
+from functools import partial
+
+from tabulate import tabulate
+
 
 name = "Nicolas Harlem Eide"
 
@@ -41,7 +45,7 @@ contact = {
 def header(text: str, *,
            lines: int = 7,
            decorating_character: str = "="):
-    """Prints the text as a header
+    """Returns the text as a header
 
     :param text: Text to display to the user
     :param lines: Amount of lines that the header will occupy
@@ -70,4 +74,8 @@ def header(text: str, *,
             output.append(decorating_character * line_length)
 
     return "\n".join(output)
+
+
+# Wrapper around tabulate to get a cleaner appearance in the REPL
+table = partial(tabulate, headers="keys", tablefmt="github")
 

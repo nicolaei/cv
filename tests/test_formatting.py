@@ -34,5 +34,5 @@ def test_that_tabbed_returns_with_values_alligned():
 
     result = nicolas.formatting.tabbed(data, spacing=spaces)
 
-    assert result.splitlines()[0].count(" ") is 5
-    assert result.splitlines()[-1].count(" ") is 4
+    assert result.splitlines()[0].count(" ") == 5
+    assert result.splitlines()[-1].count(" ") == 4

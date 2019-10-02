@@ -19,6 +19,28 @@ experience = [
      "Period": "2016 - 2017"},
 ]
 
+volunteering = [
+    {"Organization": "Øya IT",
+     "Position": "Godtfolk",
+     "period": "2017 - present"},
+
+    {"Organization": "dagen@ifi",
+     "Position": "Teknisk Ansvarlig",
+     "period": "2016 - 2019"},
+
+    {"Organization": "Cybernetisk Selskab",
+     "Position": "Nestleder",
+     "period": "2018-2019"},
+
+    {"Organization": "Cybernetisk Selskab",
+     "Position": "Teknisk Ansvarlig",
+     "period": "2015 - 2017"},
+
+    {"Organization": "Fadderstyret ved Ifi",
+     "Position": "Nestleder",
+     "period": "2017-2018"},
+]
+
 education = [
     {"University": "UiO",
      "Type": "M.Sc.",

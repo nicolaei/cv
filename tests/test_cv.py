@@ -15,10 +15,10 @@ def test_that_i_have_some_experience_with_programming_in_the_real_world():
 
 def test_that_i_actually_have_an_education():
     """Did you know that I've got a bachelor and a master degree?"""
-    assert any("b.sc." in degree["type"] for degree in cv.education)
-    assert any("m.sc." in degree["type"] for degree in cv.education)
+    assert any("B.Sc." in degree["Type"] for degree in cv.education)
+    assert any("M.Sc." in degree["Type"] for degree in cv.education)
 
 
 def test_that_i_can_be_contacted_by_a_potential_employer():
-    assert "phone" in cv.contact
-    assert "e-mail" in cv.contact
+    assert "Phone" in cv.contact
+    assert "E-mail" in cv.contact

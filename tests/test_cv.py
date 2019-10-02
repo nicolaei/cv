@@ -49,3 +49,14 @@ def test_that_header_returns_full_terminal_width_with_odd_input(
 
     assert test_text in output
     assert all(len(line) is expected_columns for line in output.splitlines())
+
+
+def test_that_tabbed_returns_with_values_alligned():
+    data = {"x": "data", "yy": "data!!"}
+    spaces = 4
+
+    result = cv.tabbed(data, spacing=spaces)
+
+    assert result.splitlines()[0].count(" ") is 5
+    assert result.splitlines()[-1].count(" ") is 4
+

@@ -76,6 +76,25 @@ def header(text: str, *,
     return "\n".join(output)
 
 
+def tabbed(data: dict, spacing: int = 4):
+    """Returns the dict with values aligned relative to the longest key
+
+    :param data: The data to format
+    :param spacing: Amount of spaces between the longest key and it's value.
+    """
+    longest_key_lenght = max(len(key) for key in data.keys())
+
+    output = []
+    for key, value in data.items():
+        output.append("{key:<{width}}{value}".format(
+            key=key + ":",
+            value=value,
+            width=longest_key_lenght + spacing + 1))
+
+    return "\n".join(output)
+
+
+
 # Wrapper around tabulate to get a cleaner appearance in the REPL
 table = partial(tabulate, headers="keys", tablefmt="github")
 
